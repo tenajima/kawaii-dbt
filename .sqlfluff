@@ -1,5 +1,6 @@
 [sqlfluff]
 templater = dbt
+dialect = bigquery
 exclude_rules = L057
 
 [sqlfluff:rules]

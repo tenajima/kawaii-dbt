@@ -9,6 +9,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: yu-iskw/action-sqlfluff@v3.2.0
         id: lint-sql
+        env:
+          GCLOUD_PROJECT: ${{ secrets.GCLOUD_PROJECT }}
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
@@ -16,6 +18,7 @@ jobs:
           sqlfluff_command: "lint"
           config: "${{ github.workspace }}/.sqlfluff"
           paths: '${{ github.workspace }}/models'
+          extra_requirements_txt: '${{ github.workspace }}/extra_requirements.txt'
       - name: 'Show outputs (Optional)'
         shell: bash
         run: |

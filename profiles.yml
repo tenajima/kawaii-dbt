@@ -5,7 +5,7 @@ kawaii-dbt:
     dev:
       type: bigquery
       method: oauth
-      project: "{{ env_var('GCLOUD_PROJECT') }}"
+      project: hoge
       dataset: kawaii_dbt
       threads: 4
       timeout_seconds: 300

@@ -7,8 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: set environment
-        run: export GCLOUD_PROJECT=${{ secrets.GCLOUD_PROJECT }}
       - uses: yu-iskw/action-sqlfluff@v3
         id: lint-sql
         with:

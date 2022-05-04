@@ -1,0 +1,14 @@
+kawaii-dbt:
+  target: dev
+  outputs:
+
+    dev:
+      type: bigquery
+      method: oauth
+      project: <your-project-name>
+      dataset: kawaii_dbt
+      threads: 4
+      timeout_seconds: 300
+      priority: interactive
+      location: US
+      retries: 1

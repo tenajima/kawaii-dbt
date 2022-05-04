@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_schedules
+    columns:
+      - name: game_id
+        tests:
+          - not_null
+          - unique
+      - name: duration_minutes
+        tests:
+          - not_null
+      - name: created_at
+        tests:
+          - not_null
+    

@@ -6,15 +6,9 @@ jobs:
     name: runner / sqlfluff (github-check)
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: set environment
         run: export GCLOUD_PROJECT=${{ secrets.GCLOUD_PROJECT }}
-      - name: debug
-        run: echo $GCLOUD_PROJECT
-      - name: debug2
-        run: |
-          export HOGE=hoge
-          echo $HOGE
-      - uses: actions/checkout@v2
       - uses: yu-iskw/action-sqlfluff@v3
         id: lint-sql
         with:

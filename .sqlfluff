@@ -1,5 +1,6 @@
 [sqlfluff]
 templater = dbt
+dialect = bigquery
 exclude_rules = L057
 
 [sqlfluff:rules]
@@ -28,6 +29,6 @@ ignore_comment_lines = True
 
 [sqlfluff:templater:dbt]
 project_dir = .
-profiles_dir = ~/.dbt
+profiles_dir = .
 profile = kawaii-dbt
 target = dev

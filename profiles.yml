@@ -1,3 +1,6 @@
+config:
+  partial_parse: false
+
 kawaii-dbt:
   target: dev
   outputs:
@@ -5,7 +8,7 @@ kawaii-dbt:
     dev:
       type: bigquery
       method: oauth
-      project: <your-project-name>
+      project: "{{ env_var('GCLOUD_PROJECT') }}"
       dataset: kawaii_dbt
       threads: 4
       timeout_seconds: 300

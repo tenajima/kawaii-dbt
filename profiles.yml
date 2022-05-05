@@ -1,6 +1,5 @@
 config:
-  partial_parse: False
-  send_anonymous_usage_stats: False
+  partial_parse: false
 
 kawaii-dbt:
   target: dev

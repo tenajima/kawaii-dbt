@@ -1,15 +1,38 @@
-Welcome to your new dbt project!
+Welcome to kawaii-dbt project!
+This is experimental repository for tenajima.
+Enjoy!
 
-### Using the starter project
+# Environment
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Platform
 
+Google Cloud Platform
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## Datasource
+
+bigquery-public-data.baseball
+
+## Development
+
+### Dependency management
+
+[poetry](https://python-poetry.org/) on Python
+
+### Set environment
+
+Set your GCP project name
+
+```she
+export GCLOUD_PROJECT=<your GCP project name>
+```
+
+## Github Setting
+
+### Secrets for Actions
+
+`GCLOUD_PROJECT` your GCP project name
+`GCP_KEY` service account which have `BigQuery Data Viewer`
+
+### Actions/Workflow permissions
+
+Set `Read and write permissions`

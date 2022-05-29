@@ -1,7 +1,6 @@
 [sqlfluff]
 templater = dbt
 dialect = bigquery
-exclude_rules = L057
 
 [sqlfluff:rules]
 tab_space_size = 4
@@ -26,6 +25,9 @@ unquoted_identifiers_policy = column_aliases
 
 [sqlfluff:rules:L016]
 ignore_comment_lines = True
+
+[sqlfluff:rules:L057]
+additional_allowed_characters = "-"
 
 [sqlfluff:templater:dbt]
 project_dir = .
